@@ -90,8 +90,7 @@ background-size: 1600px 980px;">
 
                       <div class="row ml-2">
                           <div class="col-sm-3">
-                              <label><b>Batting Team: </b></label><br><br>
-                              <label><b>Bowling Team: </b></label>
+                              <label><b>Batting Team: </b></label>
                           </div>
                           <div class="col-sm-9">
                             <select id="bat_team"  name="bat_team" style="width:300px">
@@ -100,8 +99,14 @@ background-size: 1600px 980px;">
                                 <option value="{{ t }}">{{ t.title() }}</option>
                               {% endfor %}
                             </select>
-                            <br>
-                            <br>
+                          </div>
+                      </div>
+                      <div class="row ml-2">
+                          <div class="col-sm-9">
+                              <label><b>Bowling Team: </b></label>
+                          </div>
+
+                          <div class="col-sm-9">
                             <select id="bowl_team"  name="bowl_team" style="width:300px">
                               <option value="" disabled="" selected="">--Select--</option>
                             {% for t in team %}
@@ -271,14 +276,30 @@ background-size: 1600px 980px;">
       }
     }
 
-  $('select').change(function() {
-    
+  $('#bat_team').change(function() {
     var value = $(this).val();
-    console.log(value);
-    $(this).siblings('select').children('option').each(function() {
+    
+    $('#bowl_team').children('option').each(function() {
+        if ( $(this).val() === value) {
+            $(this).prop('disabled', true);
+        }
+        else{
+			$(this).prop('disabled', false);
+        }
+    });
+    
+  });
+
+  $('#bowl_team').change(function() {
+    var value = $(this).val();
+    
+    $('#bat_team').children('option').each(function() {
         if ( $(this).val() === value) {
             console.log(true);
-            $(this).prop('disabled', true).siblings().removeAttr('disabled');   
+            $(this).prop('disabled', true);   
+        }
+     	else{
+			$(this).prop('disabled', false);
         }
     });
     
