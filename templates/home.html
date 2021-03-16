@@ -172,7 +172,7 @@ background-size: 1600px 980px;">
 
                       <div class="row ml-2">
                         <div class="col-sm-12">
-                          <center> <button type="submit" onclick="onClicked()"  class = "btn btn-primary" id="btn" data-toggle="modal" data-target="#myModal">Estimate Score</button> </center>
+                          <center> <button type="submit" onclick="onClicked()"  class = "btn btn-primary" id="btn" data-toggle="modal">Estimate Score</button> </center>
                         </div>
                       </div>
                       <br>
@@ -331,6 +331,7 @@ background-size: 1600px 980px;">
           wickets_last_5: wickets_last_5
       }, function(data, status){
           document.getElementById("result_data").innerHTML = "<label>" + data + "</label>";
+	  $("#myModel").modal("show");
 
       })
   }
