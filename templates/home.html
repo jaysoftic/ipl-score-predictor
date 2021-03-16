@@ -247,7 +247,7 @@ background-size: 1600px 980px;">
       </div>
   
       <div class="modal-body" id="result_data">
-        Modal body..
+        Please wait a second, score is calculating....
       </div>
 
       <div class="modal-footer">
@@ -331,8 +331,9 @@ background-size: 1600px 980px;">
           wickets_last_5: wickets_last_5
       }, function(data, status){
           document.getElementById("result_data").innerHTML = "<label>" + data + "</label>";
-	  $("#myModel").modal("show");
+	  
       })
+      $("#myModel").modal("show");
       
   }
 </script>
