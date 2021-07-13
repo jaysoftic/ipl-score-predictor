@@ -17,8 +17,7 @@
 
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
-<body style = "background-image: url({{ url_for('static', filename='ipl.jpg') }}); background-repeat: no-repeat;
-background-size: 1600px 980px;">
+<body style = "background-image: url({{ url_for('static', filename='ipl.jpg') }});background-repeat: no-repeat;background-size: cover; background-position: center; height: 100%; width: 100%;">
 
 <br><br><br>
 <div class = "col-lg-3 col-md-12 col-sm-12 col-xs-12">
@@ -172,7 +171,7 @@ background-size: 1600px 980px;">
 
                       <div class="row ml-2">
                         <div class="col-sm-12">
-                          <center> <button type="submit" onclick="onClicked()"  class = "btn btn-primary" id="btn">Estimate Score</button> </center>
+                          <center> <button type="submit" onclick="onClicked()"  class = "btn btn-primary" id="btn" data-toggle="modal" data-target="#myModal">Estimate Score</button> </center>
                         </div>
                       </div>
                       <br>
@@ -187,12 +186,13 @@ background-size: 1600px 980px;">
               	</center>
               </div>
 
-              <label class = "float-right">made by jaysoftic</label>
+              <label class = "float-right">developed by jaysoftic</label>
 
             </div> 
         </div> 
     </div>
     </div>
+
 
 <div class = "col-lg-3 col-md-12 col-sm-12 col-xs-12">  <!-- admin menu sidebar start-->
     <br><br><br><br><br><br><br>
@@ -247,7 +247,7 @@ background-size: 1600px 980px;">
       </div>
   
       <div class="modal-body" id="result_data">
-        Please wait a second, score is calculating....
+        Modal body..
       </div>
 
       <div class="modal-footer">
@@ -331,11 +331,11 @@ background-size: 1600px 980px;">
           wickets_last_5: wickets_last_5
       }, function(data, status){
           document.getElementById("result_data").innerHTML = "<label>" + data + "</label>";
-	      
+
       })
-      $("#myModel").modal("show");
-      
   }
 </script>
+
+
 </body>
 </html>

@@ -3,11 +3,13 @@ import util
 
 app = Flask(__name__)
 
+teams, venues = util.load_artifacts()
+teams.sort()
+venues.sort()
+
 @app.route("/")
 def home():
-    team = util.get_team()
-    venue = util.get_venue()
-    return render_template("home.html", team = team, venue = venue)
+    return render_template("home.html", team = teams, venue = venues)
 
 @app.route("/predictedScore", methods = ["POST"])
 def predicted_score():
@@ -21,11 +23,11 @@ def predicted_score():
         runs_last_5 = int(request.form["runs_last_5"])
         wickets_last_5 = int(request.form["wickets_last_5"])
 
-        result = int(util.predict_score(runs, wickets, overs, runs_last_5, wickets_last_5, bat_team, bowl_team, venue))
+        result = int(util.predict_score(overs, wickets, runs, wickets_last_5, runs_last_5, bat_team, bowl_team, venue))
         if result == 1:
             return "Something is wrong please fill proper input!!"
         else:
-            return "Predicted score range of " + bat_team + " is between " + str(result - 10) + " to " + str(result + 5)
+            return "Predicted score range of " + bat_team + " is between " + str(result - 5) + " to " + str(result + 5)
     except :
         return "Something is wrong please fill proper input!!"
 
