@@ -18,7 +18,7 @@
 - I have deployed this on Heroku platform
 Link: [https://ipl-jaysoftic.herokuapp.com/](https://ipl-jaysoftic.herokuapp.com/)
 
-![GIF](readme_resources/ipl.gif)
+![GIF](readme_resources/IPL.gif)
 
 ## How to use
 - Select venue, batting team, bowling tean and fill the inputs with proper information then click on predict button you will get predicted score of batting team.
