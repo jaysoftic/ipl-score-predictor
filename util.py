@@ -1,6 +1,7 @@
 import numpy as np
 import pickle
 import json
+import gzip
 
 
 model = None
@@ -14,16 +15,16 @@ def load_artifacts():
     global columns
     global encoded_teams
 
-    with open("artifacts/model.pickle", "rb") as f:
+    with gzip.open("artifacts/model.pickle.gz", "rb") as f:
         model = pickle.load(f)
 
-    with open("scaler.pickle", "rb") as f:
+    with open("artifacts/scaler.pickle", "rb") as f:
         scaler = pickle.load(f)
 
     with open("artifacts/columns.json", "r") as f:
         columns = np.array(json.load(f)["columns"])
 
-    with open("encodedteams.json", "r") as f:
+    with open("artifacts/encodedteams.json", "r") as f:
         encoded_teams = json.load(f)
 
     return list(encoded_teams.keys()), list(columns[7:]) + ["Barabati Stadium"]

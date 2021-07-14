@@ -7,8 +7,17 @@
 ## Overview
 - I have IPL matches records from year 2008 to 2020.
 - I have trained machine learning model for 8 teams which were playing in year 2021.
-- Here i have performed hyperparameter tunning on various model and i got **Gradient Boost** as best model for this problem statement.
-- Gradient Boost algorithm gives **0.845862 r2_score** it means **84.59%** accuracy on training data set and **0.868947 r2_score** it means **86.89%** accuracy on testing data set, here data set is splited into 80:20 ratio
+- Here i have performed hyperparameter tunning on various model and i got **Random Forest** as best model for this problem statement.
+- Gradient Booost algorithm gives **0.850539 r2_score** & **1.632532 MAE** on train dataset and **0.871335 r2_score** & **6.438084 MAE** on test dataset.
+- Random Forest algorithm gives **0.672894 r2_score** & **11.296707 MAE** on train dataset and **0.681484 r2_score** & **12.173585 MAE** on test dataset.
+- Difference of train dataset MAE and test dataset MAE is **4.805552** for Gradient Boost.
+- Difference of train dataset MAE and test dataset MAE is **0.876878** for Random Forest.
+- Here accuracy or **r2_score** of Gradient Boost algorithm is higher than Random Forest but Random Forest's **MAE** difference between train and test dataset is lower than Gradient Boost.
+- If i select Gradient Boost algorithm which has high r2_score then our model will **not perform stable** as it performed on train dataset because **MAE** difference between train and test dataset is **high** that's why it might generate **overfitting** issue.
+- If i select Radom Forest algorithm which does not have high r2_score still it will perfrom **stable** as it performed on train dataset because MAE difference between train and test dataset is **low**.
+- Here i have selected **Random Forest** algorithm with it's hyperparamter which fit best for this problem statement. It's gives 
+
+- here data set is splited into 80:20 ratio
 - Here i have developed end to end application using Flask, Javascript, Bootstrap, CSS and HTML
 
 ## Data Source
