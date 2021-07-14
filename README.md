@@ -1,8 +1,8 @@
 # IPL Score Predictor :india:
 ![GIF](readme_resources/ipl_teams.jpg)
 
-#### The IPL Score Predictor project is about predicting score of striker team.
-#### This web application have IPL 2021 teams where you can predict score of batting.
+#### The IPL Score Predictor project is about predicting score of batting team.
+#### This web application have IPL 2021 teams where you can predict score of batting team.
 
 ## Overview
 - I have IPL matches records from year 2008 to 2020.
