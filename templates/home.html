@@ -25,39 +25,39 @@
     
     <div class="card" style="background-color:#e7e6e5" >
         <div class="card-header">
-        	<ul class="list-group">
+          <ul class="list-group">
         
-	            <div id="carouselExampleIndicators" class="carousel slide polaroid" data-ride="carousel">
-	              <div class="carousel-inner">
-	                <div class="carousel-item active">
-	                  <img class="d-block w-100" src="{{ url_for('static', filename='slider/rcb.jpg') }}" alt="First slide" height="400px" width = 290px >
-	                </div> 
-	                <div class="carousel-item">
-	                  <img class="d-block w-100" src="{{ url_for('static', filename='slider/csk.jpg') }}" alt="second slide" height="400px" width = 290px >
-	                </div> 
-	                <div class="carousel-item ">
-	                  <img class="d-block w-100" src="{{ url_for('static', filename='slider/rr.jpg') }}" alt="third slide" height="400px" width = 290px>
-	                </div> 
-	                <div class="carousel-item ">
-	                  <img class="d-block w-100" src="{{ url_for('static', filename='slider/dc.jpg') }}" alt="Fourth slide" height="400px" width = 290px>
-	                </div>
-	                <div class="carousel-item">
-	                  <img class="d-block w-100" src="{{ url_for('static', filename='slider/punjab.jpg') }}" alt="five slide" height="400px" width = 290px>
-	                </div>
-	                <div class="carousel-item">
-	                  <img class="d-block w-100" src="{{ url_for('static', filename='slider/srh.jpg') }}" alt="six slide" height="400px" width = 290px>
-	                </div>
-	                <div class="carousel-item">
-	                  <img class="d-block w-100" src="{{ url_for('static', filename='slider/mi.jpg') }}" alt="seven slide" height="400px" width = 290px>
-	                </div>
-	                <div class="carousel-item">
-	                  <img class="d-block w-100" src="{{ url_for('static', filename='slider/kkr.jpg') }}" alt="eight slide" height="400px" width = 290px>
-	                </div>
-	              </div>
-	        	</div>
+              <div id="carouselExampleIndicators" class="carousel slide polaroid" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='slider/rcb.jpg') }}" alt="First slide" height="400px" width = 290px >
+                  </div> 
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='slider/csk.jpg') }}" alt="second slide" height="400px" width = 290px >
+                  </div> 
+                  <div class="carousel-item ">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='slider/rr.jpg') }}" alt="third slide" height="400px" width = 290px>
+                  </div> 
+                  <div class="carousel-item ">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='slider/dc.jpg') }}" alt="Fourth slide" height="400px" width = 290px>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='slider/punjab.jpg') }}" alt="five slide" height="400px" width = 290px>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='slider/srh.jpg') }}" alt="six slide" height="400px" width = 290px>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='slider/mi.jpg') }}" alt="seven slide" height="400px" width = 290px>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='slider/kkr.jpg') }}" alt="eight slide" height="400px" width = 290px>
+                  </div>
+                </div>
+            </div>
 
 
-        	</ul>
+          </ul>
         </div>
     </div>
 </div> 
@@ -124,7 +124,7 @@
                               <label><b>Overs: </b></label>
                           </div>
                           <div class="col-sm-9">
-                              <input onkeyup=imposeMinMax(this) type="number" id="overs" name="overs" placeholder="Enter Over (more than 5)" class="form-control" style="width:300px" min = "5.0" max = "20.0" step="0.01">
+                              <input onfocusout=imposeMinMax(this) type="number" id="overs" name="overs" placeholder="Enter Over (more than 5)" class="form-control" style="width:300px" min = "5.0" max = "20.0" step="0.01">
                           </div>
                       </div>
                       <br>
@@ -134,7 +134,7 @@
                             <label><b>Runs: </b></label>
                         </div>
                         <div class="col-sm-9">
-                            <input onkeyup=imposeMinMax(this) id="runs" type="number" name="runs" placeholder="Enter Runs" class="form-control" style="width:300px" min = "0">
+                            <input onfocusout=imposeMinMax(this) id="runs" type="number" name="runs" placeholder="Enter Runs" class="form-control" style="width:300px" min = "0">
                         </div>
                       </div>
                       <br>
@@ -144,7 +144,7 @@
                             <label><b>Wickets: </b></label>
                         </div>
                         <div class="col-sm-9">
-                            <input onkeyup=imposeMinMax(this) id="wickets" type="number" name="wickets" placeholder="Enter Wickets" class="form-control" style="width:300px" min = "0" max = "10">
+                            <input onfocusout=imposeMinMax(this) id="wickets" type="number" name="wickets" placeholder="Enter Wickets" class="form-control" style="width:300px" min = "0" max = "10">
                         </div>
                       </div>
                       <br>
@@ -154,7 +154,7 @@
                             <label><b>Run in last 5 overs: </b></label>
                         </div>
                         <div class="col-sm-9">
-                            <input onkeyup=imposeMinMax(this) id="runs_last_5" type="number" name="runs_last_5" placeholder="Enter last 5 over's run" class="form-control" style="width:300px" min = "0">
+                            <input onfocusout=imposeMinMax(this) id="runs_last_5" type="number" name="runs_last_5" placeholder="Enter last 5 over's run" class="form-control" style="width:300px" min = "0">
                         </div>
                       </div>
                       <br>
@@ -164,7 +164,7 @@
                             <label><b>Wickets in last 5 overs: </b></label>
                         </div>
                         <div class="col-sm-9">
-                            <input onkeyup=imposeMinMax(this) id="wickets_last_5" type="number" name="wickets_last_5" placeholder="Enter last 5 over's wickets" class="form-control" style="width:300px" min = "0" max = "10">
+                            <input onfocusout=imposeMinMax(this) id="wickets_last_5" type="number" name="wickets_last_5" placeholder="Enter last 5 over's wickets" class="form-control" style="width:300px" min = "0" max = "10">
                         </div>
                       </div>
                       <br>
@@ -179,11 +179,11 @@
                     </li>
                 </ul>
               <div>
-              	<center>
-	              <a href="https://github.com/jaysoftic" target="_blank"><i class="fa fa-github" style="font-size:24px"></i></a>&nbsp&nbsp&nbsp&nbsp
-	              <a href="https://www.linkedin.com/in/jaysoftic/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>&nbsp&nbsp&nbsp&nbsp
+                <center>
+                <a href="https://github.com/jaysoftic" target="_blank"><i class="fa fa-github" style="font-size:24px"></i></a>&nbsp&nbsp&nbsp&nbsp
+                <a href="https://www.linkedin.com/in/jaysoftic/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>&nbsp&nbsp&nbsp&nbsp
                 <a href="https://www.kaggle.com/jaysoftic/" target="_blank"><i class="fa fa-link" style="font-size:24px" ></i></a>
-              	</center>
+                </center>
               </div>
 
               <label class = "float-right">developed by jaysoftic</label>
@@ -247,7 +247,7 @@
       </div>
   
       <div class="modal-body" id="result_data">
-        Modal body..
+        Waiting for predicition..
       </div>
 
       <div class="modal-footer">
@@ -284,7 +284,7 @@
             $(this).prop('disabled', true);
         }
         else{
-			$(this).prop('disabled', false);
+      $(this).prop('disabled', false);
         }
     });
     
@@ -298,8 +298,8 @@
             console.log(true);
             $(this).prop('disabled', true);   
         }
-     	else{
-			$(this).prop('disabled', false);
+      else{
+      $(this).prop('disabled', false);
         }
     });
     
@@ -330,12 +330,12 @@
           runs_last_5: runs_last_5,
           wickets_last_5: wickets_last_5
       }, function(data, status){
-          document.getElementById("result_data").innerHTML = "<label>" + data + "</label>";
+         document.getElementById("result_data").innerHTML = "<label>" + data + "</label>";
 
       })
   }
-</script>
+  </script>
 
 
-</body>
-</html>
+  </body>
+  </html>
